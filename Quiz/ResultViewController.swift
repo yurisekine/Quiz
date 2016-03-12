@@ -18,7 +18,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if correctAnswer == 10 {
+        if correctAnswer == 13 {
             resultLabel.text = "全問正解なっしー！"
         } else if correctAnswer == 0 {
             resultLabel.text = "全問不正解なっしー、、"
@@ -28,10 +28,10 @@ class ResultViewController: UIViewController {
         if correctAnswer <= 3 {
             Level.text = "梨以下なっしー..."
             levelImage.image = UIImage(named: "nashi0.gif")!
-        } else if correctAnswer <= 6 {
+        } else if correctAnswer <= 7 {
             Level.text = "普通の梨レベルなしな！"
             levelImage.image = UIImage(named: "nashi.gif")!
-        } else if correctAnswer <= 9 {
+        } else if correctAnswer <= 11 {
             Level.text = "美味しい梨レベルなっしー！"
             levelImage.image = UIImage(named: "funa0.gif")!
         } else {
