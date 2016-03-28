@@ -12,31 +12,26 @@ class ResultViewController: UIViewController {
     var correctAnswer:Int = 0
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var Level: UILabel!
-    @IBOutlet var levelImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         if correctAnswer == 13 {
-            resultLabel.text = "全問正解なっしー！"
+            resultLabel.text = "全問正解だ！"
         } else if correctAnswer == 0 {
-            resultLabel.text = "全問不正解なっしー、、"
+            resultLabel.text = "全問不正解、、"
         } else {
-            resultLabel.text = "13問中、\(correctAnswer)問正解なっしー！"
+            resultLabel.text = "13問中、\(correctAnswer)問正解！"
         }
         if correctAnswer <= 3 {
-            Level.text = "梨以下なっしー..."
-            levelImage.image = UIImage(named: "nashi0.gif")!
+            Level.text = "もっと学んで..."
         } else if correctAnswer <= 7 {
-            Level.text = "普通の梨レベルなしな！"
-            levelImage.image = UIImage(named: "nashi.gif")!
+            Level.text = "普通レベル.."
         } else if correctAnswer <= 11 {
-            Level.text = "美味しい梨レベルなっしー！"
-            levelImage.image = UIImage(named: "funa0.gif")!
+            Level.text = "いいゆるさ！"
         } else {
-            Level.text = "神梨レベルなっしー！"
-            levelImage.image = UIImage(named: "funa1.gif")!
+            Level.text = "ゆる神レベル！"
         }
     }
 
